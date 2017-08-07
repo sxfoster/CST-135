@@ -1,0 +1,14 @@
+//This was created by Stephan Foster and is my own work.
+
+
+Dispenser
+-Products:Product[]
+
++AddProduct()
++RemoveProduct(Name)
++UpdateProduct(Name,Type,Quanity,Price)
++Login(User,Password)
++ProcessSale(Name,Address,State,Zip,Card,CVC)
+
++Dispenser()
++Dispenser(Products)

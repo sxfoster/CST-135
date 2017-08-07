@@ -1,0 +1,25 @@
+//This was created by Stephan Foster and is my own work.
+
+
+Product
+-NameArr:String[]
+-Name:String
+-Type:String
+-Quantity:Int
+-Price:Double
+-UPC (default: Name_Type_0001):String
+
++getName
++setName
++getType
++setType
++getQuantity
++setQuantity
++getPrice
++setPrice
+
++randNum(int, int)
+
++Product()
++Product(String,String,Int,Double)
+
