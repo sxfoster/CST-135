@@ -50,7 +50,6 @@ public class priest extends character implements spellCaster {
 		return super.toString() + "\nholySymbol: " + holySymbol + "\ndiety: " + diety + "\nknown spells: " + printSpells(this.knownSpells) + "\nMemorized spells: " + printSpells(this.memorizedSpells);
 	}
 
-	@Override
 	public void castSpell(String spell) {
 		if(this.memorizedSpells.contains(spell)){
 			this.memorizedSpells.remove(spell);
@@ -58,7 +57,6 @@ public class priest extends character implements spellCaster {
 		
 	}
 
-	@Override
 	public void forgetSpell(String spell) {
 		if(this.knownSpells.contains(spell)){
 			this.knownSpells.remove(spell);
@@ -79,9 +77,7 @@ public class priest extends character implements spellCaster {
 	
 	public void memorizeSpells(String spell, int x) {
 		for(int y = 0; y < x; y++){
-			if(this.knownSpells.contains(spell) && memorizedSpells.size() < this.getWisdom() / 2){
-				this.memorizedSpells.add(spell);
-			}			
+			this.memorizeSpell(spell);		
 		}
 	}
 	
