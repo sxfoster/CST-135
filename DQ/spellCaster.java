@@ -5,10 +5,10 @@ package random_work;
 import java.util.ArrayList;
 
 public interface spellCaster {
-	void castSpell(String spell);
-	void forgetSpell(String spell);
-	void learnSpell(String spell);
-	void memorizeSpell(String spell);
-	String printSpells(ArrayList<String> spells);
+	public abstract void castSpell(String spell);
+	public abstract void forgetSpell(String spell);
+	public abstract void learnSpell(String spell);
+	public abstract void memorizeSpell(String spell);
+	public abstract String printSpells(ArrayList<String> spells);
 	
 }
