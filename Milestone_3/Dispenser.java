@@ -1,4 +1,4 @@
-//
+//class originally created by Caleb Miller and is his own code. Class updated by Stephan Foster.
 package application;
 
 import java.util.ArrayList;
