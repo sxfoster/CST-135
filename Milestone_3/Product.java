@@ -2,7 +2,7 @@
 
 package application;
 
-public abstract class Product {
+public abstract class Product implements Comparable<Product> {
 
 	private String name;
 	private double price;
@@ -64,5 +64,40 @@ public abstract class Product {
 			return true;
 		} 
 		return false;
+	}
+	
+	//Provided by Lydia Fritz
+	@Override
+	public boolean equals(Object arg0){
+		if(arg0 instanceof Product){
+			Product p = (Product)arg0;
+			if(p.price == this.price && p.name.equals(this.name)){
+				return true;
+			}
+			else {
+				return false;
+			}
+		}
+		else {
+			return false;
+		}
+	}
+	//method originally created by Stephan Foster and is his own code.
+	@Override
+	public int compareTo(Product o) {
+		if(o.equals(this)){
+			return 0;
+		}
+		else if(o.name.equals(this.name)){
+			if(o.price > this.price){
+				return 1;
+			}
+			else {
+				return -1;
+			}
+		}
+		else {
+			return o.name.compareTo(this.name);
+		}
 	}
 }

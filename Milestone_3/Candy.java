@@ -41,5 +41,4 @@ public class Candy extends Snack{
     public String toString(){
     	return "Name: " + this.getName() + "\nPrice: " + this.getPrice() + "\nQuantity: " + this.getQuantity() + "\nHeight: " + this.getHeight() + "\nWeight: " + this.getWeight() + "\nWidth: " + this.getWidth() + "\nBrand: " + this.brand + "\nType: " + this.type;
     }
-
 }

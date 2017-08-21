@@ -1,27 +1,26 @@
-//class originally created by Caleb Miller and is his own code. Class updated by Stephan Foster.
+//
 package application;
 
 import java.util.ArrayList;
-import java.util.List;
 
 public class Dispenser {
 	
 	private ArrayList<Product> products = new ArrayList<Product>();
-	final int CAPACITY = 100;
-	// fix sized array
+	final int CAPACITY = 25;
 	
 	
 	Dispenser() {
-		products.add(new Candy("Kitkat", 1.75, 1, .6, 1.00, 1.00, "Hersey's", "chocolate bar"));
-		products.add(new Chips("Wavy Lay's", .75, 1, 1.23, .98, 1.45, "Lay's", "Sour Cream and Onion"));
-		products.add(new Drink("Coke", 1.75, 1, "Coca-cola", "Classic"));
-		products.add(new Gum("Juicy Fruit", .89, 1, .55, .75, .98, "Wriggly's", "fruit", 16));
+		this.addProduct(new Candy("Kitkat", 1.75, 1, .6, 1.00, 1.00, "Hersey's", "chocolate bar"));
+		this.addProduct(new Chips("Wavy Lay's", .75, 1, 1.23, .98, 1.45, "Lay's", "Sour Cream and Onion"));
+		this.addProduct(new Drink("Coke", 1.75, 1, "Coca-cola", "Classic"));
+		this.addProduct(new Gum("Juicy Fruit", .89, 1, .55, .75, .98, "Wriggly's", "fruit", 16));
 	}
 
 	//ADD PRODUCT
 	boolean addProduct(Product prod) {
 		if(products.size() < CAPACITY && findProduct(prod) == -1) {
 			products.add(prod);
+			this.sort();
 			return true;			
 		}
 		return false;	
@@ -50,7 +49,7 @@ public class Dispenser {
 	//ITEMS IN AN ARRAY
 	public void displayProducts(){
     	for(int i = 0; i < products.size(); i++) {
-    		System.out.println(products.get(i).toString());
+    		System.out.println(products.get(i).toString() + "\n");
     	}
 	}
 	
@@ -62,6 +61,20 @@ public class Dispenser {
 			}
 		}
 		return -1;
+	}
+	
+	//sort method based on bubble sorting Coded and implemented by Stephan Foster
+	public void sort() {		
+		for (int x = 0; x < this.products.size(); x++) {
+			for (int y = this.products.size() - 1; y >= x; y--){
+				if(this.products.get(y).compareTo(this.products.get(x)) > 0) {
+					Product temp1 = this.products.get(x);
+					Product temp2 = this.products.get(y);
+					this.products.set(x, temp2);
+					this.products.set(y,temp1);
+				}
+			}
+		}
 	}
 	
 	//toString()
