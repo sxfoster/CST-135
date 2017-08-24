@@ -1,6 +1,6 @@
 //This code was created by Stephan Foster and is my own work.
 
-package random_work;
+package application;
 
 import java.util.Random;
 
@@ -52,10 +52,10 @@ abstract class character {
 	public void setAlignment(String alignment) {
 		this.alignment = alignment;
 	}
-	public String getPlayerClass() {
+	public String getPlayerclass() {
 		return playerClass;
 	}
-	public void setPlayerClass(String playerClass) {
+	public void setPlayerclass(String playerClass) {
 		this.playerClass = playerClass;
 	}
 	public int getStrength() {
@@ -105,7 +105,7 @@ abstract class character {
 	@Override
 	public String toString() {
 		return "\ncharacter name: " + this.getName() + "\ngender: " + this.getGender() + "\nalignment: " + this.getAlignment() + "\nplayerClass: "
-				+ this.getPlayerClass() + "\nstrength: " + this.getStrength() + "\ndexterity: " + this.getDexterity() + "\nconstitution: " + this.getConstitution()
+				+ this.getPlayerclass() + "\nstrength: " + this.getStrength() + "\ndexterity: " + this.getDexterity() + "\nconstitution: " + this.getConstitution()
 				+ "\nintelligence: " + this.getIntelligence() + "\nwisdom: " + this.getWisdom() + "\ncharisma: " + this.getCharisma();
 	}
 	

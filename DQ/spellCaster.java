@@ -1,6 +1,6 @@
 //This code was created by Stephan Foster and is my own work.
 
-package random_work;
+package application;
 
 import java.util.ArrayList;
 
@@ -10,5 +10,4 @@ public interface spellCaster {
 	public abstract void learnSpell(String spell);
 	public abstract void memorizeSpell(String spell);
 	public abstract String printSpells(ArrayList<String> spells);
-	
 }

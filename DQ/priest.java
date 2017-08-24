@@ -1,24 +1,23 @@
 //This code was created by Stephan Foster and is my own work.
 
-package random_work;
+package application;
 
 import java.util.ArrayList;
 
 public class priest extends character implements spellCaster {
-	private static String priestClass = "Priest";
 	private String holySymbol, diety;
 	private ArrayList<String> memorizedSpells = new ArrayList<String>();
 	private ArrayList<String>knownSpells = new ArrayList<String>();
 	
 	public priest() {
-		super("John Smith", "male", "lawful good", priestClass, randNum(1,18), randNum(1,18), randNum(4,18), randNum(1,18), randNum(12,20), randNum(4,20));
+		super("John Smith", "male", "lawful good", "Priest", randNum(1,18), randNum(1,18), randNum(4,18), randNum(1,18), randNum(12,20), randNum(4,20));
 		this.holySymbol = "Cross";
 		this.diety = "Pelor";
 	}
 
 	public priest(String name, String gender, String alignment, int strength, int dexterity,
 			int constitution, int intelligence, int wisdom, int charisma, String holySymbol, String diety) {
-		super(name, gender, alignment, priestClass, strength, dexterity, constitution, intelligence, wisdom, charisma);
+		super(name, gender, alignment, "Priest", strength, dexterity, constitution, intelligence, wisdom, charisma);
 		this.holySymbol = holySymbol;
 		this.diety = diety;
 	}
