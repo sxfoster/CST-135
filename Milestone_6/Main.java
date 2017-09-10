@@ -1,3 +1,4 @@
+//This was created by Stephan Foster and is my own work.
 package homework;
 
 import java.io.IOException;
@@ -10,7 +11,10 @@ public class Main {
 	public static void main(String[] args) throws IOException{
 		URL url = new URL("https://raw.githubusercontent.com/sxfoster/CST-135/master/Milestone_6/flipFlapFlop.in");
 		Scanner fileReader = new Scanner(new InputStreamReader(url.openStream()));
+		//variable used to skip mandatory line in file based on requirement "Name and statement that work is one’s own included at top of EVERY file"
+		String workDisclaimer = fileReader.nextLine();
 		int stringNum = Integer.parseInt(fileReader.nextLine());
+		
 		String line;
 		for(int x = 0; x < stringNum; x++) {
 			line = fileReader.nextLine();
