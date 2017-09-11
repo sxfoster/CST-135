@@ -9,7 +9,7 @@ import java.util.Scanner;
 public class Main {
 
 	public static void main(String[] args) throws IOException{
-		URL url = new URL("https://raw.githubusercontent.com/sxfoster/CST-135/master/Milestone_6/flipFlapFlop.in");
+		URL url = new URL("https://raw.githubusercontent.com/sxfoster/CST-135/master/flipFlapFlop.in");
 		Scanner fileReader = new Scanner(new InputStreamReader(url.openStream()));
 		//variable used to skip mandatory line in file based on requirement "Name and statement that work is one’s own included at top of EVERY file"
 		String workDisclaimer = fileReader.nextLine();
